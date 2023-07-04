@@ -43,6 +43,7 @@ function App() {
         type="text"
         name="todo-input"
         value={todoText}
+        className="input-box"
         onChange={(e) => setTodoText(e.target.value)}
       />
       <input type="button" value="Add todo" onClick={handleAddTodo} />
@@ -51,13 +52,13 @@ function App() {
         {todos.map((todo) => {
           return (
             <label key={todo.id}>
+               <span>{`${todo.text}`}</span>
               <input
                 type="checkbox"
                 name=""
                 id=""
                 onClick={(e) => handleClickOnTodo(todo.id, e.target.checked)}
               />
-              {`${todo.text} + "--" + ${todo.isCompleted}`}
             </label>
           );
         })}

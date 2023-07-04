@@ -1,15 +1,84 @@
-.container_enter_todos {
-    display: flex;
-    justify-content: center;
-    /* flex-direction: column; */
-}
-.container_list_todos {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+/* color pallate new */
+:root {
+    --color-primary    : #F9F9F9;
+    --color-blue       : #0860FB;
+    --color-blue-light : #E2EBFA;
+    --color-card       : #FFFFFF;
+    --color-light-gray : #999999;
+    --color-font-dark  : #000000;
 }
 
-/* .container_list_todos > label {
-    text
-} */
+.container_enter_todos {
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    align-items: stretch;
+    margin: 10px;
+}
+
+.input-box {
+    padding: 10px 10px;
+    font-size: large;
+    flex-grow: 2;
+    margin-right: 5px;
+    border: solid var(--color-light-gray) ;
+    background-color: var(--color-primary);
+    outline: none;
+    border-radius: 5px;
+    color: #000000;
+    transition: border ease 0.3s;
+    box-shadow: inset 0px 0px 2px var(--color-light-gray);
+
+}
+
+.input-box:focus {
+    border: solid #666666;
+    outline: none;
+
+}
+
+
+.input-box + input {
+    background-color: var(--color-blue-light) ;
+    color: var(--color-blue);
+    border: solid transparent;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: larger;
+    transition: border ease 0.3s;
+    box-shadow: 0px 0px 7px var(--color-blue-light);
+    box-shadow: inset px 0px 3px var(--color-blue);
+}
+
+.input-box + input:hover {
+    border: solid var(--color-blue) ;
+}
+
+.container_list_todos {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.container_list_todos > label {
+    background-color: var(--color-card);
+    box-sizing: border-box;
+    padding: 20px;
+    border:none;
+    display: flex;
+    justify-content: space-between;
+    font-size: larger;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgb(223, 223, 223);
+    margin: 5px 0px;
+    transition: all ease 0.3s;
+}
+
+.container_list_todos > label:hover {
+    /* background-color: var(--color-light-gray); */
+    /* height: ; */
+    /* padding: 30px; */
+    box-shadow: 0px 0px 20px rgb(145, 205, 253);
+
+}
